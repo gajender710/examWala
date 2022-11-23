@@ -18,7 +18,7 @@ const App = ()  => {
   const Tab = createBottomTabNavigator();
   return (
     <NavigationContainer>
-      <Tab.Navigator  screenOptions={{tabBarShowLabel:false,header:()=><Header/>  }}  initialRouteName={'HomeScreen'}>
+      <Tab.Navigator  screenOptions={{tabBarShowLabel:false,header:()=><Header/>  ,tabBarStyle:{borderTopWidth:0,elevation:0}}}  initialRouteName={'HomeScreen'}>
         <Tab.Screen name="LocationScreen"  component={LocationScreen} options={{title:"",tabBarIcon:({focused})=><Icon  name="location" size={35}  color={focused? 'black': 'grey'}/> ,tabBarActiveTintColor:"pink"}} />
         <Tab.Screen name="HomeScreen" component={HomeScreen} options={{tabBarIcon:({focused})=><Icon  name="home" size={35}  color={focused? 'black': 'grey'} />}}/>
         <Tab.Screen name="BagScreen" component={BagScreen} options={{tabBarIcon:({focused})=><Icon  name="logo-bitbucket" size={35} color={focused? 'black': 'grey'}  />}}/>

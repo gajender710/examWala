@@ -3,7 +3,7 @@ import React from 'react'
 
 const LocationScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>LocationScreen</Text>
     </View>
   )
@@ -11,4 +11,9 @@ const LocationScreen = () => {
 
 export default LocationScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:'white',
+  }
+})

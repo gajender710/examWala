@@ -22,10 +22,12 @@ const HomeScreen = () => {
 
   const renderCourses = ({item}) =>{
     return(
-      <Card >
-            <Image source={{uri:"https://ionicframework.com/docs/icons/logo-react-icon.png"}} style={styles.courseImage}/>
-            <Text style={{color:'black'}}>{item.name}</Text>
-      </Card>
+      <View style={{marginHorizontal:10,}}>
+        <Card>
+              <Image source={{uri:imageURL}} style={styles.courseImage}/>
+              <Text style={{color:'black'}}>{item.name}</Text>
+        </Card>
+      </View>
     )
   }
 
@@ -33,8 +35,8 @@ const HomeScreen = () => {
     return(
       <Card lineView = {true}>
             <View style={{flexDirection:'row',alignItems:'center'}}>
-                <Icon  name="document-text-outline" size={35}  color={'teal'}/>
-                <Text style={{fontSize:12,marginLeft:10,}}>{item.name}</Text>
+                <Icon  name="document-text-outline" size={30}  color={'teal'}/>
+                <Text style={{fontSize:11,marginLeft:10,}}>{item.name}</Text>
             </View>
             <Icon  name="arrow-forward" size={25}  color={'teal'}/>
 
@@ -75,7 +77,7 @@ const HomeScreen = () => {
 
      
           <View style = {styles.contentHeading}>
-              <Text style={{color:'black',marginLeft:20}}>Reecetly learned</Text>
+              <Text style={{color:'black',marginLeft:20}}>Recently learned</Text>
               <TouchableWithoutFeedback>
                 <Text style={[styles.textSmall,{fontSize:10}]} >See All {">"}</Text>
               </TouchableWithoutFeedback>              
@@ -128,11 +130,6 @@ const styles = StyleSheet.create({
     },
     textLarge:{
       fontSize:22,
-    },
-    textName:{
-      color:'black',
-      fontSize:20,
-      marginBottom:20,
     },
     contentHeading:{
       flexDirection:'row',
